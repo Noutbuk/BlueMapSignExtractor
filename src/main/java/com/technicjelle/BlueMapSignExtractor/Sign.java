@@ -64,7 +64,7 @@ public class Sign {
 		return sb.toString().stripTrailing();
 	}
 
-	private @NotNull String getLabel() {
+	public @NotNull String getLabel() {
 		if (front.isWrittenOn()) {
 			final @Nullable String frontLabel = front.getLabel();
 			if (frontLabel != null) return frontLabel;
