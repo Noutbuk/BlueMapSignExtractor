@@ -53,7 +53,7 @@ public class Sign {
 		return prefix + position;
 	}
 
-	private String getFormattedHTML(Config config) {
+	public String getFormattedHTML(Config config) {
 		final StringBuilder sb = new StringBuilder();
 		if (front.isWrittenOn() || !config.getIgnoreBlankSigns()) {
 			sb.append(front.getFormattedHTML());
