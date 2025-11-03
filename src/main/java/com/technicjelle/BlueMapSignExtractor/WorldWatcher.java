@@ -119,7 +119,7 @@ public class WorldWatcher extends Thread {
 									if (blockEntity instanceof SignBlockEntity signBlockEntity) {
 										Sign sign = new Sign(signBlockEntity, dataVersion);
 										// If the config is set to ignore blank signs, skip them
-										if ((config.getIgnoreBlankSigns() && sign.isBlank()) || !sign.getLabel().contains("[map]")) return;
+										if ((config.getIgnoreBlankSigns() && sign.isBlank()) || !sign.getFormattedHTML(config).contains("[map]")) return;
 										Marker marker = sign.createMarker(config);
 										markerSet.put(sign.createKey(regionPrefix), marker);
 									}
